@@ -16,16 +16,13 @@ console.log(typeof(age));
 console.log(typeof(lie));
 console.log(typeof(honesty));
 var typeTest = [animal,age,lie,honesty];
-for (let i = 0; i < 4; i++){
-    for (j = 0; j < 4; j++){
-        if (i === j || j > i) {
-
-        }else if (typeof(typeTest[i])==typeof(typeTest[j])){
+for (let i = 0; i < 3; i++){
+    for (let j = i + 1; j < 4; j++){
+        if (typeof(typeTest[i])==typeof(typeTest[j])){
             console.log(typeTest[i] + " and " + typeTest[j] + " have SAME TYPE.")
         }else{
             console.log(typeTest[i] + " and " + typeTest[j] + " have NO SAME TYPE.")
         }
-
     }
 }
 console.log(" ");
