@@ -1,2 +1,2 @@
-# hyf-javascript1
+# JavaScript1
 javascript_1_homework_files
