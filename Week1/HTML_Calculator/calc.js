@@ -52,7 +52,7 @@ for (let i = 0; i < choose.length; i++){
         }else if (choose[i] == dec && screen.innerHTML.indexOf(".") > -1){
             //there is already a decimal symbol
         }else if (choose[i] == plus){
-            result = parseFloat(screen.innerHTML);
+            result += parseFloat(screen.innerHTML);
             screen.innerHTML = "+";
             operator = plus.innerHTML;
         }else if (choose[i] == minus){
@@ -83,13 +83,15 @@ for (let i = 0; i < choose.length; i++){
                 result *= value2;
             }else if(operator == devide.innerHTML){
                 result /= value2;
+            }else{
+                result = value2;
             }
             screen.innerHTML = result.toString();
             result = 0;
             value2 = 0;
             operator = "";
             resultShowed = true;   
-        }else if (choose[i] == back) {
+        }else if (choose[i] == back){
             screen.innerHTML = screen.innerHTML.slice(0,screen.innerHTML.length-1);
             if (screen.innerHTML.length == 0 || resultShowed === true){
                 screen.innerHTML = "0";
@@ -97,6 +99,7 @@ for (let i = 0; i < choose.length; i++){
         }else if (screen.innerHTML == plus.innerHTML || screen.innerHTML == minus.innerHTML
             || screen.innerHTML == devide.innerHTML || screen.innerHTML == multi.innerHTML){
             screen.innerHTML = choose[i].innerHTML;
+            resultShowed = false;
         }else if (resultShowed === true){
             screen.innerHTML = "0";
             resultShowed = false;    
