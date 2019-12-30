@@ -29,6 +29,7 @@ let choose = [C,back,devide,seven,eight,nine,multi,four,five,
 let result = 0;
 let value2 = 0;
 let operator = "";
+let resultShowed = false;
 
 for (let i = 0; i < choose.length; i++){
     function playSound(){
@@ -36,18 +37,18 @@ for (let i = 0; i < choose.length; i++){
         sound.play();
     }    
     choose[i].onclick = function(){
-        if (screen.innerHTML == 0){
+        if (screen.innerHTML === "0"){
             screen.innerHTML = "";
         }   
         if (choose[i] == C){
             screen.innerHTML = "0";
             result = 0;
             value2 = 0; 
-        }else if (choose[i] == back) {
-            screen.innerHTML = screen.innerHTML.slice(0,screen.innerHTML.length-1);
-            if (screen.innerHTML.length == 0){
-                screen.innerHTML = "0";
-            }
+        // }else if (choose[i] == back) {
+        //     screen.innerHTML = screen.innerHTML.slice(0,screen.innerHTML.length-1);
+        //     if (screen.innerHTML.length == 0){
+        //         screen.innerHTML = "0";
+        //     }
         }else if (choose[i] == dec && screen.innerHTML.indexOf(".") > -1){
             //there is already a decimal symbol
         }else if (choose[i] == plus){
@@ -86,12 +87,21 @@ for (let i = 0; i < choose.length; i++){
             screen.innerHTML = result.toString();
             result = 0;
             value2 = 0;
-            operator = "";   
+            operator = "";
+            resultShowed = true;   
+        }else if (choose[i] == back) {
+            screen.innerHTML = screen.innerHTML.slice(0,screen.innerHTML.length-1);
+            if (screen.innerHTML.length == 0 || resultShowed === true){
+                screen.innerHTML = "0";
+            }
         }else if (screen.innerHTML == plus.innerHTML || screen.innerHTML == minus.innerHTML
             || screen.innerHTML == devide.innerHTML || screen.innerHTML == multi.innerHTML){
             screen.innerHTML = choose[i].innerHTML;
+        }else if (resultShowed === true){
+            screen.innerHTML = "0";
+            resultShowed = false;    
         }else{
-            screen.innerHTML += choose[i].innerHTML;    
+            screen.innerHTML += choose[i].innerHTML;
         }
     }           
 };
