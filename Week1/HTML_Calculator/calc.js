@@ -101,7 +101,7 @@ for (let i = 0; i < choose.length; i++){
             screen.innerHTML = choose[i].innerHTML;
             resultShowed = false;
         }else if (resultShowed === true){
-            screen.innerHTML = "0";
+            screen.innerHTML = choose[i].innerHTML;
             resultShowed = false;    
         }else{
             screen.innerHTML += choose[i].innerHTML;
