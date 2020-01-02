@@ -1,11 +1,11 @@
+for (let i = 0; i < 3; i++){
+    document.getElementsByClassName("card")[i].style.visibility = "hidden";
+}
+
 const grams = document.getElementById("grams");
 const kilograms = document.getElementById("kilogramsOutput");
 const pounds = document.getElementById("poundsOutput");
 const ounces = document.getElementById("ouncesOutput");
-
-for (let i = 0; i < 3; i++){
-    document.getElementsByClassName("card")[i].style.visibility = "hidden";
-}
 
 grams.addEventListener("input",function() {
     for (let i = 0; i < 3; i++){
