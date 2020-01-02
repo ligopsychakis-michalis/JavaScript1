@@ -22,6 +22,6 @@ input{
 
 @media all and (max-width:468px){
     ::placeholder,input{
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 }
