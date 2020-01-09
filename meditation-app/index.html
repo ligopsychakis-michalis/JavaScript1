@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meditation App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="meditation.css" type="text/css">
+</head>
+<body>
+    <div class="app row justify-content-around align-items-center">
+        <video loop id="video" src="./video/rain.mp4" type="video/mp4"></video> 
+        <div class="time-select col-4 row flex-column">
+            <button id="min2" data-time="120">2 Minutes</button>
+            <button id="min5" data-time="300">5 Minutes</button>
+            <button id="min10" data-time="600">10 Minutes</button>
+        </div>
+        <div class="player-container col-4 row flex-column">
+            <audio id="song" src="./sounds/rain.mp3"></audio>
+            <img id="play" src="./svg/play.svg" alt="play">
+            <img src="./svg/moving-outline.svg" alt="outline">
+            <img src="./svg/track-outline.svg" alt="outline">
+            <h3 id="time" class="text-center text-white">00:00</h3>
+        </div>
+        <div class="sound-picker col-4 row flex-column">
+            <button id="rain"><img src="./svg/rain.svg" alt="rain image"></button>
+            <button id="beach"><img src="./svg/beach.svg" alt="beach image"></button>
+        </div>
+    </div>    
+<script src="meditation.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+</body>
+</html> 
