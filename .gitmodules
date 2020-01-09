@@ -1,0 +1,3 @@
+[submodule "Week3/Week3/meditation-app"]
+	path = Week3/Week3/meditation-app
+	url = https://github.com/ligopsychakis-michalis/JavaScript1.git
