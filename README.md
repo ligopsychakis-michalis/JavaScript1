@@ -1,5 +1,5 @@
 # JavaScript1
-Calculator: https://ligopsychakis-michalis.github.io/JavaScript1/Week1/HTML_Calculator/
+Calculator: https://ligopsychakis-michalis.github.io/JavaScript_1/Week1/HTML_Calculator/
 
 Temperature_Converter: https://ligopsychakis-michalis.github.io/JavaScript1/Week2/temperature-converter/
 
